@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label{
+    @apply text-slate_900 font-bold;
+}
+
+input[type='radio']:checked + span{
+    @apply border-lime;
+}
+input[type='radio']:checked + span::after{
+    opacity:1;
+    transform:scale(1);
+}
+.form_field:has(input[type='radio']:checked),
+.inputs:has(input[type='number']:focus-within),
+.form_field:has(input[type='radio']:focus){
+    @apply bg-light  border-lime;
+}
+.input:focus-within,.inputs:has(input[type='number']:focus-within) span{
+    @apply bg-light;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
