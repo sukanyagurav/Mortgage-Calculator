@@ -36,13 +36,13 @@ function App() {
     
       calculatedMonthlyPayment = data.mortgage_amount * (monthlyInterest * Math.pow( monthlyInterest + 1,data.term * 12)) /  (Math.pow( monthlyInterest + 1, data.term * 12) - 1)
       calculatedTermValue = calculatedMonthlyPayment.toFixed(2) * (parseInt(data.term) * 12)
-      setMonthlyPayment(new Intl.NumberFormat('en-US').format(calculatedMonthlyPayment))
-      setTermValue(new Intl.NumberFormat('en-US').format(calculatedTermValue))
+      setMonthlyPayment(new Intl.NumberFormat('en-US',{  maximumFractionDigits: 2}).format(calculatedMonthlyPayment))
+      setTermValue(new Intl.NumberFormat('en-US',{  maximumFractionDigits: 2}).format(calculatedTermValue))
     }else if(data.type == 'interest'){
       calculatedMonthlyPayment = data.mortgage_amount * monthlyInterest
       calculatedTermValue = calculatedMonthlyPayment.toFixed(2) * (parseInt(data.term) * 12)
-      setMonthlyPayment(new Intl.NumberFormat('en-US').format(calculatedMonthlyPayment.toFixed(2)))
-      setTermValue(new Intl.NumberFormat('en-US').format(calculatedTermValue))
+      setMonthlyPayment(new Intl.NumberFormat('en-US',{  maximumFractionDigits: 2}).format(calculatedMonthlyPayment))
+      setTermValue(new Intl.NumberFormat('en-US',{  maximumFractionDigits: 2}).format(calculatedTermValue))
     }
 
   }
