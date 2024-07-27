@@ -7,8 +7,8 @@ Thanks for checking out my solution.
 ![Design preview for the Mortgage repayment calculator coding challenge](./src/design/desktop-design-completed.jpg)
 
 ## Links
-- [Live URL](https://www.frontendmentor.io/community)
-- [Github URL]()
+- [Live URL](https://mortagage-repayment-calculator5867.netlify.app/)
+- [Github URL](https://github.com/sukanyagurav/Mortgage-Calculator)
 
 
 
