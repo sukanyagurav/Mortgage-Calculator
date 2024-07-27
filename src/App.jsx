@@ -36,13 +36,13 @@ function App() {
     
       calculatedMonthlyPayment = data.mortgage_amount * (monthlyInterest * Math.pow( monthlyInterest + 1,data.term * 12)) /  (Math.pow( monthlyInterest + 1, data.term * 12) - 1)
       calculatedTermValue = calculatedMonthlyPayment.toFixed(2) * (parseInt(data.term) * 12)
-      setMonthlyPayment(calculatedMonthlyPayment)
-      setTermValue(calculatedTermValue)
+      setMonthlyPayment(new Intl.NumberFormat('en-US').format(calculatedMonthlyPayment))
+      setTermValue(new Intl.NumberFormat('en-US').format(calculatedTermValue))
     }else if(data.type == 'interest'){
       calculatedMonthlyPayment = data.mortgage_amount * monthlyInterest
       calculatedTermValue = calculatedMonthlyPayment.toFixed(2) * (parseInt(data.term) * 12)
-      setMonthlyPayment(calculatedMonthlyPayment)
-      setTermValue(calculatedTermValue)
+      setMonthlyPayment(new Intl.NumberFormat('en-US').format(calculatedMonthlyPayment.toFixed(2)))
+      setTermValue(new Intl.NumberFormat('en-US').format(calculatedTermValue))
     }
 
   }
@@ -194,9 +194,9 @@ function App() {
 
               <div className="p-8 rounded-t-md border-t-lime border-t-4 mt-6 bg-slate_900 drop-shadow-2xl">
                 <p className=" text-slate_300">Your monthly repayments</p>
-                <span className="text-lime text-5xl font-bold block pt-2 pb-4 border-b-[0.3px] border-b-slate_700">£ {monthlyPayement.toFixed(2)}</span>
+                <span className="text-lime text-5xl font-bold block pt-2 pb-4 border-b-[0.3px] border-b-slate_700">£ {monthlyPayement}</span>
                <p className=" text-slate_300 mt-4 mb-2">Total you'll repay over the Term</p> 
-               <span className="text-slate_100 font-semibold text-2xl">£ {termValue.toFixed(2)}</span>
+               <span className="text-slate_100 font-semibold text-2xl">£ {termValue}</span>
               </div>
             </>
           }
