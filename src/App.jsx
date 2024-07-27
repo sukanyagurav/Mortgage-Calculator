@@ -48,7 +48,7 @@ function App() {
   }
   return (
     <>
-      <main className=" w-full flex bg-white md:rounded-2xl  drop-shadow-md overflow-hidden flex-col md:flex-row max-w-[900px]">
+      <main className=" w-full flex bg-white md:rounded-2xl  shadow-[-2px_10px_10px_0px_rgba(5,5,5,1)] overflow-hidden flex-col md:flex-row max-w-[900px]">
         <div className=" bg-white p-6 basis-6/12 ">
           <div className="flex items-center justify-between mb-4 flex-wrap">
             <h1 className="font-bold text-2xl text-slate_900">Mortgage Calculator</h1>
@@ -192,7 +192,7 @@ function App() {
               <h2 className="text-white font-semibold text-2xl">Your results</h2>
               <p className=" text-slate_300  my-3"> Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
 
-              <div className="p-8 rounded-t-md border-t-lime border-t-4 mt-6 bg-slate_900 drop-shadow-2xl">
+              <div className="p-8  border-t-lime border-t-4 mt-6 rounded-md bg-slate_900 drop-shadow-2xl shadow-[-2px_5px_5px_0px_rgba(5,5,5,1)]">
                 <p className=" text-slate_300">Your monthly repayments</p>
                 <span className="text-lime text-5xl font-bold block pt-2 pb-4 border-b-[0.3px] border-b-slate_700">£ {monthlyPayement}</span>
                <p className=" text-slate_300 mt-4 mb-2">Total you'll repay over the Term</p> 
